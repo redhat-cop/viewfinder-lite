@@ -1,0 +1,18 @@
+{
+    "name": "redhat/viewfinder-lite",
+    "description": "Viewfinder Lite - Digital Sovereignty Readiness Assessment",
+    "type": "project",
+    "license": "proprietary",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "monolog/monolog": "^3.5",
+        "dompdf/dompdf": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Viewfinder\\": "includes/"
+        }
+    }
+}

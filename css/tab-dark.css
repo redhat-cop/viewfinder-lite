@@ -1,0 +1,574 @@
+/**
+ * Dark Theme Tab Styles
+ * Matches the modern profile-admin dashboard styling
+ */
+
+/* Main Container */
+.container {
+  max-width: 1400px;
+  margin: 1rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Tab Navigation Container */
+.tab {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 1rem auto 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Center Profile Title */
+#centerDivLine {
+  margin: 0 auto 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #0d60f8;
+}
+
+#centerDivLine h2 {
+  margin: 0;
+  color: #9ec7fc;
+  font-weight: bold;
+}
+
+/* Tab Buttons */
+.tab button {
+  background-color: transparent;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 0.25rem;
+}
+
+/* Hover Effect */
+.tab button:hover {
+  background-color: rgba(13, 96, 248, 0.1);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Active Tab */
+.tab button.active {
+  background: #0d60f8;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(13, 96, 248, 0.4);
+}
+
+/* Tab Content Container */
+.tabcontent {
+  display: none;
+  padding: 1rem 1.5rem;
+  border: 1px solid #444;
+  border-top: none;
+  background-color: #1f1f1f;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  margin: 0 auto;
+  animation: fadeEffect 0.5s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade In Animation */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fieldset Styling */
+fieldset {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 0.75rem 0;
+}
+
+fieldset legend {
+  color: #12bbd4;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 0.75rem;
+}
+
+/* Form Labels */
+label {
+  color: #fff !important;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+label.smallText {
+  color: #ccc !important;
+}
+
+/* Fix any remaining white text issues */
+.form-group label,
+.form-check-label {
+  color: #fff !important;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0d60f8;
+  box-shadow: 0 0 0 2px rgba(13, 96, 248, 0.2);
+}
+
+/* Range Slider - Dark Theme */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0d60f8 0%, #12bbd4 100%);
+  border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #0d60f8;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0d60f8 0%, #12bbd4 100%);
+  border-radius: 4px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #0d60f8;
+}
+
+/* Buttons */
+button:not(.tablinks),
+input[type="submit"] {
+  background: #0d60f8;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:not(.tablinks):hover,
+input[type="submit"]:hover {
+  background: #0a4fc5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 96, 248, 0.4);
+}
+
+#submitButton {
+  margin: 1rem auto;
+  display: block;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Text Colors */
+p, span, div {
+  color: #ccc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+/* Small Text Framework - Fix white on grey contrast */
+.smallTextFramework {
+  color: #ccc !important;
+  font-size: 1.0rem;
+}
+
+/* Horizontal Checkboxes for Compliance Frameworks */
+.horizontal-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+.horizontal-checkboxes p.smallTextFramework {
+  width: 100%;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.horizontal-checkboxes input[type="checkbox"] {
+  margin-right: 0.35rem;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.horizontal-checkboxes label {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: #ccc !important;
+  font-weight: normal;
+  font-size: 1.0rem;
+  line-height: 1;
+}
+
+/* Line of Business Section */
+.lob {
+  margin: 1rem 0 1rem 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+.lobFont {
+  color: #fff !important;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.lobItem {
+  color: #ccc !important;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.lob input[type="radio"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
+.lob br {
+  line-height: 1.5;
+}
+
+a {
+  color: #12bbd4;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0d60f8;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #12bbd4;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #444;
+  color: #ccc;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: rgba(13, 96, 248, 0.05);
+}
+
+/* Score Display Elements */
+#lefty {
+  float: left;
+  color: #5ba352;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#righty {
+  float: right;
+  color: #c9190b;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#okToSubmit {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #5ba352;
+}
+
+#duplicates {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #c9190b;
+  margin: auto;
+  text-align: center;
+}
+
+/* Maturity Level Text Colors (matching original style.css) */
+.smallTextFoundation,
+.smallTextPartial {
+  color: #4291f8 !important;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.smallTextStrategic,
+.smallTextRisk-Informed {
+  color: #0d60f8 !important;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.smallTextAdvanced {
+  color: #2aaa04 !important;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Overview Text Colors */
+.overviewWhite {
+  color: #ccc !important;
+}
+
+/* Maturity Level Cell Backgrounds (matching original style.css) */
+.cellFoundation,
+.cellPartial {
+  background-color: #9ec7fc !important;
+  color: #070707 !important;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cellStrategic,
+.cellRisk-Informed {
+  background-color: #0d60f8 !important;
+  color: #ffffff !important;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cellAdvanced {
+  background-color: #2aaa04 !important;
+  color: #faf7f7 !important;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cellHeaderFoundation {
+  color: #4291f8 !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cellHeaderStrategic {
+  color: #0d60f8 !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cellHeaderAdvanced {
+  color: #2aaa04 !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Maturity Level Selection Tags - Dark Theme Override */
+ul.ks-cboxtags {
+  padding: 0.75rem !important;
+}
+
+ul.ks-cboxtags li label {
+  background-color: #2a2a2a !important;
+  border: 2px solid #444 !important;
+  color: #ccc !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 1.0rem !important;
+}
+
+ul.ks-cboxtags li label:hover {
+  background-color: #333 !important;
+  border-color: #0d60f8 !important;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+  border: 2px solid #0d60f8 !important;
+  background-color: #12bbd4 !important;
+  color: #000000 !important;
+}
+
+/* Additional Text Contrast Fixes */
+strong, b {
+  color: #fff !important;
+}
+
+.slider-label,
+.control-label {
+  color: #fff !important;
+}
+
+/* Ensure good contrast for all text elements */
+.tabcontent span,
+.tabcontent div:not(.horizontal-checkboxes) {
+  color: #ccc !important;
+}
+
+/* Default color for tabcontent paragraphs without specific classes */
+.tabcontent p:not([class*="smallText"]) {
+  color: #ccc !important;
+}
+
+.tabcontent strong,
+.tabcontent b,
+.tabcontent h1,
+.tabcontent h2,
+.tabcontent h3,
+.tabcontent h4,
+.tabcontent h5,
+.tabcontent h6 {
+  color: #fff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .tab {
+    padding: 0.25rem;
+  }
+
+  .tab button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  .tabcontent {
+    padding: 1rem;
+  }
+
+  #centerDivLine {
+    font-size: 1.25rem;
+  }
+
+  .horizontal-checkboxes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Disclaimer Footer */
+.disclaimer-footer {
+  background-color: #2a2a2a;
+  border-top: 1px solid #444;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.disclaimer-footer p {
+  color: #ccc;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.disclaimer-footer strong {
+  color: #0d60f8;
+}

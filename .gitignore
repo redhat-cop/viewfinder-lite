@@ -1,0 +1,31 @@
+# Composer dependencies
+/vendor/
+
+# Logs
+/logs/
+*.log
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Composer lock file (optional - remove this line if you want to commit it)
+composer.lock
+
+# Temporary files
+*.tmp
+*.cache
