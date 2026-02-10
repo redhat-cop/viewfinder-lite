@@ -66,8 +66,7 @@ RUN sed -i 's/^ServerTokens .*/ServerTokens Prod/' /etc/httpd/conf/httpd.conf &&
 # ------------------------------------------------------------------------------
 RUN curl -sS https://getcomposer.org/installer | php -- \
         --install-dir=/usr/local/bin \
-        --filename=composer \
-        --version=latest && \
+        --filename=composer && \
     chmod +x /usr/local/bin/composer
 
 # ------------------------------------------------------------------------------
