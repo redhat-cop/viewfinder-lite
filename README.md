@@ -1,10 +1,27 @@
 # Digital Sovereignty Readiness Assessment
 
-A streamlined Digital Sovereignty assessment tool focused on providing organizations with a quick and actionable readiness evaluation.
+> **Upstream, Open Source Version**
+>
+> This is the upstream, open source version of the Red Hat Digital Sovereignty Readiness Assessment tool. We encourage collaboration, contributions, and community feedback to help organizations worldwide evaluate and improve their digital sovereignty posture.
 
 ## Overview
 
-This tool helps organizations evaluate their digital sovereignty posture across 7 critical domains in just 10-15 minutes.
+This streamlined assessment tool helps organizations evaluate their digital sovereignty readiness across 7 critical domains in just 10-15 minutes. The tool provides:
+
+- **Quick Assessment**: 21 targeted questions designed for rapid evaluation
+- **4-Level Maturity Model**: Foundation, Developing, Strategic, and Advanced levels
+- **Actionable Insights**: Specific recommendations based on your maturity level
+- **PDF Reports**: Downloadable reports for stakeholders
+- **Open Source**: Community-driven development and transparency
+
+## About This Project
+
+This is an **upstream open source project** maintained by the Red Hat Community of Practice (CoP). The tool is designed to be:
+
+- **Freely Available**: Open source under Apache 2.0 license
+- **Community-Driven**: Contributions welcome from organizations and individuals
+- **Vendor-Neutral**: Applicable to any organization, regardless of technology stack
+- **Privacy-Focused**: No data collection - all assessment data stays in your browser
 
 ## Screenshots
 
@@ -427,17 +444,60 @@ Edit `ds-qualifier/results.php` to adjust:
 - Maturity level names
 - Recommendations per level
 
+## Contributing
+
+We welcome contributions from the community! This is an open source project and we encourage:
+
+### Ways to Contribute
+
+- **Report Issues**: Found a bug? [Open an issue](https://github.com/redhat-cop/viewfinder-lite/issues)
+- **Suggest Features**: Have ideas for improvements? We'd love to hear them
+- **Submit Pull Requests**: Code contributions are welcome
+  - Add new questions or refine existing ones
+  - Improve maturity level descriptions
+  - Enhance the user interface
+  - Fix bugs or improve performance
+  - Translate to other languages
+- **Share Feedback**: Help us improve by sharing your assessment experience
+- **Contribute Domain Expertise**: Help refine questions and recommendations for specific domains
+
+### Contribution Guidelines
+
+1. **Fork the repository** and create a feature branch
+2. **Make your changes** with clear, descriptive commit messages
+3. **Test thoroughly** to ensure nothing breaks
+4. **Submit a pull request** with a description of your changes
+5. **Engage in discussion** - we'll review and provide feedback
+
+### Code of Conduct
+
+This project follows the [Red Hat Community of Practice Code of Conduct](https://github.com/redhat-cop). We are committed to providing a welcoming and inclusive environment for all contributors.
+
+### Questions?
+
+- **GitHub Discussions**: Ask questions and discuss ideas
+- **GitHub Issues**: Report bugs and request features
+- **Community**: Join the Red Hat Community of Practice
+
 ## License
 
 Apache-2.0 License - Red Hat
 
+This project is licensed under the Apache License 2.0. See the LICENSE file for details.
+
 ## Support
 
-For issues, questions, or feature requests, please refer to the main Viewfinder project documentation or contact your Red Hat representative.
+This is a community-supported open source project. For issues, questions, or feature requests:
+
+- **GitHub Issues**: https://github.com/redhat-cop/viewfinder-lite/issues
+- **GitHub Discussions**: https://github.com/redhat-cop/viewfinder-lite/discussions
+- **Red Hat Community of Practice**: https://github.com/redhat-cop
+
+For enterprise support and the enhanced CMMI version, contact your Red Hat representative.
 
 ## Disclaimer
 
-This application is provided for informational purposes only. The information is provided "as is" with no guarantee or warranty of accuracy, completeness, or fitness for a particular purpose. Users should conduct their own validation and testing before relying on assessment results for decision-making.
+This Digital Sovereignty Readiness Assessment Tool is provided by Red Hat for informational purposes only to help organizations review their general sovereign posture. It cannot be used to validate an organization's compliance with any specific sovereignty requirements. It is not endorsed by any regulatory authority, and its findings or recommendations do not constitute legal advice. Red Hat bears no legal responsibility or liability for the results or its use. No identity data will be collected or saved.
 
 ---
 
