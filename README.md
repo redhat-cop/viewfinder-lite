@@ -317,19 +317,6 @@ Edit `ds-qualifier/config.php` to customize:
 - **Session Timeout**: Automatic session expiration (1 hour)
 - **Secure File Operations**: Atomic file writes with rollback capability
 
-## Comparison with Full Viewfinder
-
-| Feature | Full Viewfinder | Viewfinder Lite |
-|---------|----------------|-----------------|
-| Profile Management | ✓ | ✗ |
-| Full Maturity Assessments | ✓ | ✗ |
-| Readiness Assessment | ✓ | ✓ |
-| Digital Sovereignty Quiz | ✓ | ✗ |
-| Operation Sovereign Shield | ✓ | ✗ |
-| Compliance Framework Mapping | ✓ | ✗ |
-| Line of Business Content | ✓ | ✗ |
-| Approximate Size | ~100+ MB | ~60-65 MB |
-
 ## Troubleshooting
 
 ### Common Issues
