@@ -56,7 +56,7 @@ This is an **upstream open source project** maintained by the Red Hat Community 
 
 1. **Clone or extract the application**:
    ```bash
-   cd /var/www/html/viewfinder-lite
+   cd /var/www/html/viewfinder-upstream
    ```
 
 2. **Install dependencies**:
@@ -67,14 +67,14 @@ This is an **upstream open source project** maintained by the Red Hat Community 
 3. **Set file permissions**:
    ```bash
    # Set ownership (adjust user/group for your system)
-   sudo chown -R apache:apache /var/www/html/viewfinder-lite
+   sudo chown -R apache:apache /var/www/html/viewfinder-upstream
 
    # Set directory permissions
-   sudo chmod 755 /var/www/html/viewfinder-lite
-   sudo chmod 775 /var/www/html/viewfinder-lite/logs
+   sudo chmod 755 /var/www/html/viewfinder-upstream
+   sudo chmod 775 /var/www/html/viewfinder-upstream/logs
 
    # Set file permissions
-   find /var/www/html/viewfinder-lite -type f -exec chmod 644 {} \;
+   find /var/www/html/viewfinder-upstream -type f -exec chmod 644 {} \;
    ```
 
 4. **Configure web server**:
@@ -82,20 +82,20 @@ This is an **upstream open source project** maintained by the Red Hat Community 
 
 5. **Access the application**:
    ```
-   http://your-server/viewfinder-lite
+   http://your-server/viewfinder-upstream
    ```
 
 ### Podman Installation
 
 1. **Build the container**:
    ```bash
-   cd /var/www/html/viewfinder-lite
-   podman build -t viewfinder-lite:latest .
+   cd /var/www/html/viewfinder-upstream
+   podman build -t viewfinder-upstream:latest .
    ```
 
 2. **Run the container**:
    ```bash
-   podman run -d -p 8080:8080 --name viewfinder-lite viewfinder-lite:latest
+   podman run -d -p 8080:8080 --name viewfinder-upstream viewfinder-upstream:latest
    ```
 
 3. **Access the application**:
@@ -107,13 +107,13 @@ This is an **upstream open source project** maintained by the Red Hat Community 
 
 ### Apache Configuration
 
-**VirtualHost Example** (`/etc/httpd/conf.d/viewfinder-lite.conf`):
+**VirtualHost Example** (`/etc/httpd/conf.d/viewfinder-upstream.conf`):
 ```apache
 <VirtualHost *:80>
-    ServerName viewfinder-lite.example.com
-    DocumentRoot /var/www/html/viewfinder-lite
+    ServerName viewfinder-upstream.example.com
+    DocumentRoot /var/www/html/viewfinder-upstream
 
-    <Directory /var/www/html/viewfinder-lite>
+    <Directory /var/www/html/viewfinder-upstream>
         Options -Indexes +FollowSymLinks
         AllowOverride All
         Require all granted
@@ -125,19 +125,19 @@ This is an **upstream open source project** maintained by the Red Hat Community 
     </Directory>
 
     # Logging
-    ErrorLog /var/log/httpd/viewfinder-lite-error.log
-    CustomLog /var/log/httpd/viewfinder-lite-access.log combined
+    ErrorLog /var/log/httpd/viewfinder-upstream-error.log
+    CustomLog /var/log/httpd/viewfinder-upstream-access.log combined
 </VirtualHost>
 ```
 
 ### Nginx Configuration
 
-**Server Block Example** (`/etc/nginx/conf.d/viewfinder-lite.conf`):
+**Server Block Example** (`/etc/nginx/conf.d/viewfinder-upstream.conf`):
 ```nginx
 server {
     listen 80;
-    server_name viewfinder-lite.example.com;
-    root /var/www/html/viewfinder-lite;
+    server_name viewfinder-upstream.example.com;
+    root /var/www/html/viewfinder-upstream;
     index index.php;
 
     # Security headers
@@ -162,15 +162,15 @@ server {
     }
 
     # Logging
-    access_log /var/log/nginx/viewfinder-lite-access.log;
-    error_log /var/log/nginx/viewfinder-lite-error.log;
+    access_log /var/log/nginx/viewfinder-upstream-access.log;
+    error_log /var/log/nginx/viewfinder-upstream-error.log;
 }
 ```
 
 ## File Structure
 
 ```
-viewfinder-lite/
+viewfinder-upstream/
 ├── index.php                    # Landing page
 ├── composer.json                # PHP dependencies
 ├── composer.lock                # Dependency lock file
@@ -324,15 +324,15 @@ Edit `ds-qualifier/config.php` to customize:
 **Issue**: Permission denied errors
 ```bash
 # Solution: Set correct ownership and permissions
-sudo chown -R apache:apache /var/www/html/viewfinder-lite
-sudo chmod 755 /var/www/html/viewfinder-lite
-sudo chmod 775 /var/www/html/viewfinder-lite/logs
+sudo chown -R apache:apache /var/www/html/viewfinder-upstream
+sudo chmod 755 /var/www/html/viewfinder-upstream
+sudo chmod 775 /var/www/html/viewfinder-upstream/logs
 ```
 
 **Issue**: Composer dependencies not found
 ```bash
 # Solution: Run composer install
-cd /var/www/html/viewfinder-lite
+cd /var/www/html/viewfinder-upstream
 composer install --no-dev --optimize-autoloader
 ```
 
@@ -357,10 +357,10 @@ View application logs for troubleshooting:
 
 ```bash
 # View recent logs
-tail -f /var/www/html/viewfinder-lite/logs/app.log
+tail -f /var/www/html/viewfinder-upstream/logs/app.log
 
 # Search for errors
-grep ERROR /var/www/html/viewfinder-lite/logs/app.log
+grep ERROR /var/www/html/viewfinder-upstream/logs/app.log
 
 # View web server logs
 tail -f /var/log/httpd/error_log    # Apache (RHEL/CentOS)
@@ -404,7 +404,7 @@ We welcome contributions from the community! This is an open source project and 
 
 ### Ways to Contribute
 
-- **Report Issues**: Found a bug? [Open an issue](https://github.com/redhat-cop/viewfinder-lite/issues)
+- **Report Issues**: Found a bug? [Open an issue](https://github.com/redhat-cop/viewfinder-upstream/issues)
 - **Suggest Features**: Have ideas for improvements? We'd love to hear them
 - **Submit Pull Requests**: Code contributions are welcome
   - Add new questions or refine existing ones
@@ -443,8 +443,8 @@ This project is licensed under the Apache License 2.0. See the LICENSE file for 
 
 This is a community-supported open source project. For issues, questions, or feature requests:
 
-- **GitHub Issues**: https://github.com/redhat-cop/viewfinder-lite/issues
-- **GitHub Discussions**: https://github.com/redhat-cop/viewfinder-lite/discussions
+- **GitHub Issues**: https://github.com/redhat-cop/viewfinder-upstream/issues
+- **GitHub Discussions**: https://github.com/redhat-cop/viewfinder-upstream/discussions
 - **Red Hat Community of Practice**: https://github.com/redhat-cop
 
 For enterprise support and the enhanced CMMI version, contact your Red Hat representative.

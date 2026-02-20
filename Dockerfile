@@ -1,5 +1,5 @@
 # ==============================================================================
-# Viewfinder Lite - Container Image
+# Viewfinder Upstream - Container Image
 # ==============================================================================
 # A streamlined Digital Sovereignty Readiness Assessment tool
 # Based on Red Hat Universal Base Image 9 with PHP 8.3
@@ -17,12 +17,12 @@ FROM registry.access.redhat.com/ubi9/php-83:latest
 # Metadata
 # ------------------------------------------------------------------------------
 LABEL maintainer="Chris Jenkins <chrisj@redhat.com>" \
-      name="viewfinder-lite" \
+      name="viewfinder-upstream" \
       version="1.0.0" \
-      description="Viewfinder Lite - Digital Sovereignty Readiness Assessment" \
+      description="Viewfinder Upstream - Digital Sovereignty Readiness Assessment" \
       summary="Lightweight assessment tool for evaluating digital sovereignty posture across 7 domains" \
       io.k8s.description="Digital Sovereignty Readiness Assessment tool with 7 domain coverage and 4-level maturity model" \
-      io.k8s.display-name="Viewfinder Lite" \
+      io.k8s.display-name="Viewfinder Upstream" \
       io.openshift.tags="assessment,digital-sovereignty,php,redhat"
 
 # ------------------------------------------------------------------------------
@@ -92,7 +92,7 @@ COPY --chown=1001:0 includes/ ./includes/
 COPY --chown=1001:0 ds-qualifier/ ./ds-qualifier/
 COPY --chown=1001:0 error-pages/ ./error-pages/
 COPY --chown=1001:0 css/ ./css/
-COPY --chown=1001:0 js/ ./js/
+#COPY --chown=1001:0 js/ ./js/
 COPY --chown=1001:0 images/ ./images/
 COPY --chown=1001:0 README.md ./
 
@@ -136,6 +136,6 @@ CMD ["php", "-S", "0.0.0.0:8080", "-t", "/opt/app-root/src"]
 # ==============================================================================
 # Build Instructions:
 # ------------------
-# Build: podman build -t viewfinder-lite:latest .
-# Run:   podman run -d -p 8080:8080 --name viewfinder-lite viewfinder-lite:latest
+# Build: podman build -t viewfinder-upstream:latest .
+# Run:   podman run -d -p 8080:8080 --name viewfinder-upstream viewfinder-upstream:latest
 # ==============================================================================

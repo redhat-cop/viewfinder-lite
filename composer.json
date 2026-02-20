@@ -1,6 +1,6 @@
 {
-    "name": "redhat/viewfinder-lite",
-    "description": "Viewfinder Lite - Digital Sovereignty Readiness Assessment",
+    "name": "redhat/viewfinder-upstream",
+    "description": "Viewfinder Upstream - Digital Sovereignty Readiness Assessment",
     "type": "project",
     "license": "proprietary",
     "version": "1.0.0",
